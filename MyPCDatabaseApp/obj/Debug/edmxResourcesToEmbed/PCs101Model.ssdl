@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="COMPUTERSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="PCs101">
+    <Key>
+      <PropertyRef Name="PCID" />
+    </Key>
+    <Property Name="PCID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MANUFACTURER" Type="varchar" MaxLength="50" />
+    <Property Name="MODEL" Type="varchar" MaxLength="50" />
+    <Property Name="SSD_HDD" Type="varchar" MaxLength="50" />
+    <Property Name="RAM" Type="int" />
+    <Property Name="PRICE" Type="int" />
+  </EntityType>
+  <EntityContainer Name="COMPUTERSModelStoreContainer">
+    <EntitySet Name="PCs101" EntityType="Self.PCs101" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
